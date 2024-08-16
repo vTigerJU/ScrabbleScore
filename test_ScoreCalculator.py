@@ -5,7 +5,7 @@ class MyTestCase(unittest.TestCase):
     score_calc = ScoreCalculator()
 
     def test_calculate(self):
-        self.assertEqual(8,self.score_calc.calculate("WORD"))
+        self.assertEqual(14,self.score_calc.calculate("CABBAGE"))
         self.assertNotEqual(10,self.score_calc.calculate("HELLO"))
 
 

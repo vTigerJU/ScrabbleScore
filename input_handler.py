@@ -13,7 +13,7 @@ class InputHandler():
     def is_letters(self, word):
         """Checks that string is all letters"""
         return word.isalpha()
-
+ 
     def equal_length(self, length, word):
         """Compares length of given word to given int"""
         return length == len(word)
