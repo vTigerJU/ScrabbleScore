@@ -1,28 +1,28 @@
 import unittest
-from InputHandler import InputHandler
+from input_handler import InputHandler
 
 class MyTestCase(unittest.TestCase):
-    inputHandler = InputHandler()
+    input_handler = InputHandler()
 
-    def test_toUpper(self):
-        self.assertEqual("ABBA", inputHandler.toUpper("abba"))
+    def test_to_upper(self):
+        self.assertEqual("ABBA", self.input_handler.to_upper("abba"))
 
-    def test_isLetter(self):
-        self.assertTrue(inputHandler.isLetter("hejsvejs"))
-        self.assertFalse(inputHandler.isLetter("1"))
-        self.assertFalse(inputHandler.isLetter("&"))
+    def test_is_letters(self):
+        self.assertTrue(self.input_handler.is_letters("hejsvejs"))
+        self.assertFalse(self.input_handler.is_letters("1"))
+        self.assertFalse(self.input_handler.is_letters("&"))
     
-    def test_equalLength(self):
-        self.assertTrue(inputHandler.equalLength(3,"abc"))
-        self.assertFalse(inputHandler.equalLength(10,"abc"))
+    def test_equal_length(self):
+        self.assertTrue(self.input_handler.equal_length(3,"abc"))
+        self.assertFalse(self.input_handler.equal_length(10,"abc"))
 
-    def test_inDictionary(self):
-        self.assertTrue(inputHandler.inDictionary("ape"))
-        self.assertFalse(inputHandler.inDictionary("aaaaaaaa"))
+    def test_in_dictionary(self):
+        self.assertTrue(self.input_handler.in_dictionary("APE"))
+        self.assertFalse(self.input_handler.in_dictionary("aaaaaaaa"))
 
-    def test_isCorrectInput(self):
-        self.assertTrue(inputHandler.isCorrectInput("hello", length=5))
-        self.assertFalse(inputHandler.isCorrectInput("3bla#", length=10))
+    def test_is_correct_input(self):
+        self.assertTrue(self.input_handler.is_correct_input("hello", length=5))
+        self.assertFalse(self.input_handler.is_correct_input("3bla#", length=10))
 
 if __name__ == "__main__":
     unittest.main()
