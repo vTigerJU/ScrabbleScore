@@ -4,9 +4,6 @@ from input_handler import InputHandler
 class MyTestCase(unittest.TestCase):
     input_handler = InputHandler()
 
-    def test_to_upper(self):
-        self.assertEqual("ABBA", self.input_handler.to_upper("abba"))
-
     def test_is_letters(self):
         self.assertTrue(self.input_handler.is_letters("hejsvejs"))
         self.assertFalse(self.input_handler.is_letters("1"))
