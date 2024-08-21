@@ -17,7 +17,8 @@ class ScoreCalculator():  # pylint: disable = too-few-public-methods
     def calculate(self, word):
         """Calculates score of given word"""
         score = 0
-
+        word = word.upper()
+        
         for letter in word:
             for key in self.key_values:
                 if letter in self.letter_score[key]:

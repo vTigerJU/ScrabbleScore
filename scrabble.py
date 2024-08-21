@@ -40,7 +40,7 @@ class Scrabble():
                 word = ""
             if time.time() > end_time:
                 print("You answered too slow")
-                word = ""
+                word = "" 
         word = word.upper()
         return word
 
