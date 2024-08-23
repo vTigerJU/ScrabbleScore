@@ -55,7 +55,7 @@ class Scrabble: #  pylint: disable = possibly-used-before-assignment too-many-in
 
         # Submit button
         self.submit_button = tk.Button(root, text='submit',
-                                       command=self.check_word)
+                                       command=self.check_word, state="disabled")
         self.submit_button.pack(pady=10)
 
     def update_score(self, points):
